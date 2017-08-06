@@ -17,7 +17,6 @@
 
       <li><%= link_to "Home", root_path%></li>
       <li><%= link_to "Required Tasks", home_required_tasks_path %></li>
-       <% if user_signed_in? %>
         <li><%= link_to "Initiatives", initiatives_index_path%></li>
         <li><%= link_to "Announcements", home_announcements_path%></li>
         <li><%= link_to "Development", home_development_path%></li>
@@ -25,6 +24,7 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile<span class="caret">
           </span></a>
             <ul class="dropdown-menu">
+            <% if user_signed_in? %>
                 <li><%= link_to "Edit Profile", edit_user_registration_path%></li>
                 <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
             </ul>
