@@ -14,3 +14,38 @@
     height: 360px;
     /* width: 970px; */
 }
+
+.carousel-caption
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	background: rgba(0,0,0,0.4);
+}
+
+.carousel-indicators
+{
+	bottom: -10px;
+}
+.carousel-indicators li
+{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 1px;
+	text-indent: -999px;
+	cursor: pointer;
+
+	border-radius: 50%;
+}
+.carousel-indicators .active
+{
+	width: 12px;
+	height: 12px;
+	margin: 0;
+}
