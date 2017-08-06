@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pinterested</title>
+    <title>Principals Weekly</title>
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/2cf8943d57.js"></script>
   </head>
 
   <body>
@@ -18,6 +19,8 @@
 <% end %>
 
     <%= yield %>
+
+    <%=render 'home/footer'%>
 </div>    
   </body>
 </html>
