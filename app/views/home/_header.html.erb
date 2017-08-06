@@ -13,15 +13,22 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-right nav-pills">
 
       <li><%= link_to "Home", root_path%></li>
-      <li><%= link_to "About Page", home_about_path %></li>
+      <li><%= link_to "Required Tasks", home_required_tasks_path %></li>
        <% if user_signed_in? %>
-        <li><%= link_to "create post", new_pin_path%></li>
-        <li><%= link_to "Discover", pins_path%></li>
-        <li><%= link_to "Edit Profile", edit_user_registration_path%></li>
-        <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Initiatives", initiatives_index_path%></li>
+        <li><%= link_to "Announcements", home_announcements_path%></li>
+        <li><%= link_to "Development", home_development_path%></li>
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile<span class="caret">
+          </span></a>
+            <ul class="dropdown-menu">
+                <li><%= link_to "Edit Profile", edit_user_registration_path%></li>
+                <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+            </ul>
+
        <% else %> 
         <li><%= link_to "Login", new_user_session_path%></li>
         <li><%= link_to "Join", new_user_registration_path%></li>
